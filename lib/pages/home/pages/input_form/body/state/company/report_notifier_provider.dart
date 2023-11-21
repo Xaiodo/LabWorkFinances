@@ -1,14 +1,14 @@
 import 'package:flutter_labwork_2/models/active.dart';
 import 'package:flutter_labwork_2/models/passive.dart';
 import 'package:flutter_labwork_2/models/report.dart';
-import 'package:flutter_labwork_2/pages/body/state/active/active_first_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/active/active_second_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/active/active_third_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/passive/passive_first_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/passive/passive_fourth_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/passive/passive_second_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/passive/passive_third_section_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/widgets/popup_menu_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_first_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_second_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_third_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_first_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_fourth_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_second_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_third_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/popup_menu_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ReportStateNotifier extends StateNotifier<Report> {

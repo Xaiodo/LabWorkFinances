@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_labwork_2/pages/body/widgets/body_row.dart';
-import 'package:flutter_labwork_2/pages/body/state/passive/passive_third_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_third_section_notifier.dart';
 import 'package:flutter_labwork_2/widgets/text_input.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

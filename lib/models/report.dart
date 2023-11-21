@@ -1,6 +1,6 @@
 import 'package:flutter_labwork_2/models/active.dart';
 import 'package:flutter_labwork_2/models/passive.dart';
-import 'package:flutter_labwork_2/pages/body/widgets/popup_menu_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/popup_menu_widget.dart';
 
 class Report {
   final int yaer;

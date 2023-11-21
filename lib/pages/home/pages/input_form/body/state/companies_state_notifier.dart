@@ -1,5 +1,5 @@
 import 'package:flutter_labwork_2/models/company.dart';
-import 'package:flutter_labwork_2/pages/body/state/company/company_state_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/company/company_state_notifier.dart';
 import 'package:flutter_labwork_2/services/companies_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

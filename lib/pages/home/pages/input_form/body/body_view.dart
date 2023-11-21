@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_labwork_2/pages/body/active/active_first_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/active/active_header.dart';
-import 'package:flutter_labwork_2/pages/body/active/active_second_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/active/active_third_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/passive/passive_first_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/passive/passive_fourth_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/passive/passive_header.dart';
-import 'package:flutter_labwork_2/pages/body/passive/passive_second_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/passive/passive_third_section_widget.dart';
-import 'package:flutter_labwork_2/pages/body/state/companies_state_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/company/company_state_notifier.dart';
-import 'package:flutter_labwork_2/pages/body/state/company/report_notifier_provider.dart';
-import 'package:flutter_labwork_2/pages/body/widgets/popup_menu_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_first_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_header.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_second_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_third_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_first_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_fourth_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_header.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_second_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_third_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/companies_state_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/company/company_state_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/company/report_notifier_provider.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/popup_menu_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BodyView extends ConsumerWidget {

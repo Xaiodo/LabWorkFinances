@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_labwork_2/pages/body/body_view.dart';
-import 'package:flutter_labwork_2/pages/header/header_view.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/body_view.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/header/header_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
