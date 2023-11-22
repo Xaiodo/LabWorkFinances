@@ -30,12 +30,15 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setIntangibleAssetsPriceAtBeginning,
+              initialValue:
+                  provider.intangibleAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setIntangibleAssetsPriceAtEnd,
+              initialValue: provider.intangibleAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -48,12 +51,17 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setnitualValueOfIntangibleAssetsAtBeginning,
+              initialValue: provider
+                  .initualValueOfIntangibleAssets.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setnitualValueOfIntangibleAssetsAtEnd,
+              initialValue:
+                  provider.initualValueOfIntangibleAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -67,6 +75,9 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setAccumulatedAmortizationOfIntangibleAssetsAtBeginning,
+              initialValue: provider
+                  .accumulatedAmortizationOfIntangibleAssets.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -74,6 +85,9 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setAccumulatedAmortizationOfIntangibleAssetsAtEnd,
+              initialValue: provider
+                  .accumulatedAmortizationOfIntangibleAssets.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -86,12 +100,17 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setUnfinishedCapitalInvestmentsAtBeginning,
+              initialValue: provider
+                  .unfinishedCapitalInvestments.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setUnfinishedCapitalInvestmentsAtEnd,
+              initialValue:
+                  provider.unfinishedCapitalInvestments.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -104,12 +123,14 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setMainAssetsAtBeginning,
+              initialValue: provider.mainAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setMainAssetsAtEnd,
+              initialValue: provider.mainAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -122,12 +143,16 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setInitialValueOfMainAssetsAtBeginning,
+              initialValue:
+                  provider.initialValueOfMainAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setInitialValueOfMainAssetsAtEnd,
+              initialValue:
+                  provider.initialValueOfMainAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -140,12 +165,16 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setWearAndTearOfMainAssetsAtBeginning,
+              initialValue:
+                  provider.wearAndTearOfMainAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setWearAndTearOfMainAssetsAtEnd,
+              initialValue:
+                  provider.wearAndTearOfMainAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -158,12 +187,15 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setInvestmentPropertyAtBeginning,
+              initialValue:
+                  provider.investmentProperty.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setInvestmentPropertyAtEnd,
+              initialValue: provider.investmentProperty.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -176,12 +208,16 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setLongtermBiologicalAssetsAtBeginning,
+              initialValue:
+                  provider.longtermBiologicalAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setLongtermBiologicalAssetsAtEnd,
+              initialValue:
+                  provider.longtermBiologicalAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -194,12 +230,16 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setByMethodOfParticipationAtBeginning,
+              initialValue:
+                  provider.byMethodOfParticipation.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setByMethodOfParticipationAtEnd,
+              initialValue:
+                  provider.byMethodOfParticipation.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -213,12 +253,18 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setOtherFinancialInvestmentsOfLongTermAtBeginning,
+              initialValue: provider
+                  .otherFinancialInvestmentsOfLongTerm.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherFinancialInvestmentsOfLongTermAtEnd,
+              initialValue: provider
+                  .otherFinancialInvestmentsOfLongTerm.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -231,12 +277,15 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setLongtermReceivablesAtBeginning,
+              initialValue:
+                  provider.longtermReceivables.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setLongtermReceivablesAtEnd,
+              initialValue: provider.longtermReceivables.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -249,12 +298,15 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setDeferredTaxAssetsAtBeginning,
+              initialValue:
+                  provider.deferredTaxAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setDeferredTaxAssetsAtEnd,
+              initialValue: provider.deferredTaxAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -267,12 +319,16 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherNonCurrentAssetsAtBeginning,
+              initialValue:
+                  provider.otherNonCurrentAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherNonCurrentAssetsAtEnd,
+              initialValue:
+                  provider.otherNonCurrentAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -287,12 +343,14 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setTotalAtBeginning,
+              initialValue: provider.total.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setTotalAtEnd,
+              initialValue: provider.total.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,

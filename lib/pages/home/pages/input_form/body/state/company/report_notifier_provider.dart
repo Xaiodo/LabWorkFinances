@@ -1,9 +1,18 @@
-import 'package:flutter_labwork_2/models/active.dart';
-import 'package:flutter_labwork_2/models/passive.dart';
+import 'package:flutter_labwork_2/models/active/active_first_section.dart';
+import 'package:flutter_labwork_2/models/active/active_second_section.dart';
+import 'package:flutter_labwork_2/models/active/active_third_section.dart';
+import 'package:flutter_labwork_2/models/active_section.dart';
+import 'package:flutter_labwork_2/models/additional/additional_section.dart';
+import 'package:flutter_labwork_2/models/passive/passive_first_section.dart';
+import 'package:flutter_labwork_2/models/passive/passive_fourth_section.dart';
+import 'package:flutter_labwork_2/models/passive/passive_second_section.dart';
+import 'package:flutter_labwork_2/models/passive/passive_third_section.dart';
+import 'package:flutter_labwork_2/models/passive_section.dart';
 import 'package:flutter_labwork_2/models/report.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_first_section_notifier.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_second_section_notifier.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_third_section_notifier.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/additional/additional_section_notifier.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_first_section_notifier.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_fourth_section_notifier.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_second_section_notifier.dart';
@@ -12,27 +21,25 @@ import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/popup
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ReportStateNotifier extends StateNotifier<Report> {
-  final ActiveFirstSectionNotifier activeFirstProvider;
-  final ActiveSecondSectionNotifier activeSecondProvider;
-  final ActiveThirdSectionNotfier activeThirdProvider;
+  final Ref ref;
+  late final ActiveFirstSection activeFirstSection;
+  late final ActiveSecondSection activeSecondSection;
+  late final ActiveThirdSection activeThirdSection;
 
-  final PassiveFirstSectionNotifier passiveFirstProvider;
-  final PassiveSecondSectionNotifier passiveSecondProvider;
-  final PassiveThirdSectionNotifier passiveThirdProvider;
-  final PassiveFourthSectionNotifier passiveFourthProvider;
+  late final PassiveFirstSection passiveFirstSection;
+  late final PassiveSecondSection passiveSecondSection;
+  late final PassiveThirdSection passiveThirdSection;
+  late final PassiveFourthSection passiveFourthSection;
+
+  late final AdditionalSection additionalSection;
 
   ReportStateNotifier({
-    required this.activeFirstProvider,
-    required this.activeSecondProvider,
-    required this.activeThirdProvider,
-    required this.passiveFirstProvider,
-    required this.passiveSecondProvider,
-    required this.passiveThirdProvider,
-    required this.passiveFourthProvider,
-  }) : super(Report.initial());
+    required this.ref,
+  }) : super(
+          Report.initial(),
+        );
 
   void setYear(int year) {
-    print(year);
     state = state.copyWith(yaer: year);
   }
 
@@ -40,46 +47,40 @@ class ReportStateNotifier extends StateNotifier<Report> {
     state = state.copyWith(quarter: quarter);
   }
 
-  Report getreport() {
-    final activeFirstSection = activeFirstProvider.getActiveFirstSection();
-    final activeSecondSection = activeSecondProvider.getActiveSecondSection();
-    final activeThirdSection = activeThirdProvider.getActiveThirdSection();
+  Report getReport() {
+    activeFirstSection = ref.read(activeFirstSectionProvider);
+    activeSecondSection = ref.read(activeSecondSectionProvider);
+    activeThirdSection = ref.read(activeThirdSectionProvider);
 
-    final passiveFirstSection = passiveFirstProvider.getPassiveFirstSection();
-    final passiveSecondSection =
-        passiveSecondProvider.getPassiveSecondSection();
-    final passiveThirdSection = passiveThirdProvider.getPassiveThirdSection();
-    final passiveFourthSection =
-        passiveFourthProvider.getPassiveFourthSection();
+    passiveFirstSection = ref.read(passiveFirstSectionProvider);
+    passiveSecondSection = ref.read(passiveSecondSectionProvider);
+    passiveThirdSection = ref.read(passiveThirdSectionProvider);
+    passiveFourthSection = ref.read(passiveFourthSectionProvider);
 
-    state = state.copyWith(
-      active: Active(
+    additionalSection = ref.read(additionalSectionNotifierProvider);
+
+    return state = state.copyWith(
+      active: ActiveSection(
         firstSection: activeFirstSection,
         secondSection: activeSecondSection,
         thirdSection: activeThirdSection,
       ),
-      passive: Passive(
+      passive: PassiveSection(
         firstSection: passiveFirstSection,
         secondSection: passiveSecondSection,
         thirdSection: passiveThirdSection,
         fourthSection: passiveFourthSection,
       ),
+      additional: additionalSection,
       quarter: state.quarter,
       yaer: state.yaer,
     );
-    return state;
   }
 }
 
 final reportNotifierProvider =
     StateNotifierProvider<ReportStateNotifier, Report>(
   (ref) => ReportStateNotifier(
-    activeFirstProvider: ref.read(activeFirstSectionProvider.notifier),
-    activeSecondProvider: ref.read(activeSecondSectionProvider.notifier),
-    activeThirdProvider: ref.read(activeThirdSectionProvider.notifier),
-    passiveFirstProvider: ref.read(passiveFirstSectionProvider.notifier),
-    passiveSecondProvider: ref.read(passiveSecondSectionProvider.notifier),
-    passiveThirdProvider: ref.read(passiveThirdSectionProvider.notifier),
-    passiveFourthProvider: ref.read(passiveFourthSectionProvider.notifier),
+    ref: ref,
   ),
 );

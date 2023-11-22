@@ -1,31 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_labwork_2/pages/home/pages/input_form/body/body_view.dart';
-import 'package:flutter_labwork_2/pages/home/pages/input_form/header/header_view.dart';
+import 'package:flutter_labwork_2/pages/home/pages/form_calculations/view/form_calculations_view.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/view/input_form_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: const Color(0xFF191919),
         body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: MediaQuery.of(context).size.width * 0.1,
-              vertical: MediaQuery.of(context).size.height * 0.1,
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
             ),
-            child: Column(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(
-                  child: Text(
-                    'Вікно для введення даних',
-                    style: Theme.of(context).textTheme.titleLarge,
+                Expanded(
+                  child: InkWell(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const InputFormView(),
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text('Ввід даних', style: TextStyle(fontSize: 48)),
+                    ),
                   ),
                 ),
-                const SizedBox(height: 30),
-                const HeaderView(),
-                const SizedBox(height: 20),
-                const BodyView(),
+                Expanded(
+                  child: InkWell(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const FormCalculationsView(),
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Розрахунки',
+                        style: TextStyle(
+                          fontSize: 48,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

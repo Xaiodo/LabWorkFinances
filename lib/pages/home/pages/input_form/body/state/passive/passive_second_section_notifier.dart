@@ -33,6 +33,8 @@ class PassiveSecondSectionNotifier extends StateNotifier<PassiveSecondSection> {
           ),
         );
 
+  void reset() => state = PassiveSecondSection.initial();
+
   void setDeferredTaxLiabilitiesAtBeginning(String value) {
     state = state.copyWith(
       deferredTaxLiabilities: state.deferredTaxLiabilities.copyWith(

@@ -31,12 +31,15 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setShortTermBankLoansAtBeginning,
+              initialValue:
+                  provider.shortTermBankLoans.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setShortTermBankLoansAtEnd,
+              initialValue: provider.shortTermBankLoans.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -50,6 +53,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForLongTermLiabilitiesAtBeginning,
+              initialValue: provider
+                  .currentAccountsPayableForLongTermLiabilities.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -57,6 +63,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setCurrentAccountsPayableForLongTermLiabilitiesAtEnd,
+              initialValue: provider
+                  .currentAccountsPayableForLongTermLiabilities.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -70,6 +79,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setCurrentAccountsPayableForGoodsServicesAtBeginning,
+              initialValue: provider
+                  .currentAccountsPayableForGoodsServices.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -77,6 +89,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setCurrentAccountsPayableForGoodsServicesAtEnd,
+              initialValue: provider
+                  .currentAccountsPayableForGoodsServices.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -90,6 +105,10 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForBudgetarySettlementsAtBeginning,
+              initialValue: provider
+                  .currentAccountsPayableForBudgetarySettlements
+                  .priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -97,6 +116,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForBudgetarySettlementsAtEnd,
+              initialValue: provider
+                  .currentAccountsPayableForBudgetarySettlements.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -110,6 +132,10 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtBeginning,
+              initialValue: provider
+                  .currentAccountsPayableForInsuranceSettlements
+                  .priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -117,6 +143,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtEnd,
+              initialValue: provider
+                  .currentAccountsPayableForInsuranceSettlements.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -130,6 +159,10 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtBeginning,
+              initialValue: provider
+                  .currentAccountsPayableForInsuranceSettlements
+                  .priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -137,6 +170,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtEnd,
+              initialValue: provider
+                  .currentAccountsPayableForInsuranceSettlements.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -150,6 +186,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setCurrentAccountsPayableForLaborPaymentsAtBeginning,
+              initialValue: provider
+                  .currentAccountsPayableForLaborPayments.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
@@ -157,6 +196,9 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setCurrentAccountsPayableForLaborPaymentsAtEnd,
+              initialValue: provider
+                  .currentAccountsPayableForLaborPayments.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -169,12 +211,15 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCurrentProvisionsAtBeginning,
+              initialValue:
+                  provider.currentProvisions.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCurrentProvisionsAtEnd,
+              initialValue: provider.currentProvisions.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -187,12 +232,15 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setFuturePeriodRevenuesAtBeginning,
+              initialValue:
+                  provider.futurePeriodRevenues.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setFuturePeriodRevenuesAtEnd,
+              initialValue: provider.futurePeriodRevenues.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -205,12 +253,16 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherCurrentLiabilitiesAtBeginning,
+              initialValue:
+                  provider.otherCurrentLiabilities.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherCurrentLiabilitiesAtEnd,
+              initialValue:
+                  provider.otherCurrentLiabilities.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -223,12 +275,14 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setTotalAtBeginning,
+              initialValue: provider.total.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setTotalAtEnd,
+              initialValue: provider.total.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,

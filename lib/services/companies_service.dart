@@ -11,6 +11,23 @@ class CompaniesService {
     file.writeAsString('');
     await file.writeAsString(jsonEncode(companies));
   }
+
+  Future<List<Company>> getCompanies() async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/companies.json');
+    if (!file.existsSync()) {
+      return [];
+    }
+    final json = await file.readAsString();
+    if (json.isEmpty) {
+      return [];
+    }
+
+    final companiesJson = jsonDecode(json);
+    return companiesJson
+        .map<Company>((companyJson) => Company.fromJson(companyJson))
+        .toList();
+  }
 }
 
 final companiesServiceProvider =

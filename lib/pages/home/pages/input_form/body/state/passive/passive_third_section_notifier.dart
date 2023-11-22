@@ -54,6 +54,8 @@ class PassiveThirdSectionNotifier extends StateNotifier<PassiveThirdSection> {
           ),
         );
 
+  void reset() => state = PassiveThirdSection.initial();
+
   void setShortTermBankLoansAtBeginning(String value) {
     state = state.copyWith(
       shortTermBankLoans: state.shortTermBankLoans.copyWith(

@@ -41,6 +41,8 @@ class PassiveFirstSectionNotifier extends StateNotifier<PassiveFirstSection> {
           ),
         );
 
+  void reset() => state = PassiveFirstSection.initial();
+
   void setRegisteredEquityAtBeginning(String value) => state = state.copyWith(
         registeredEquity: state.registeredEquity
             .copyWith(priceAtBeginning: double.tryParse(value) ?? 0),

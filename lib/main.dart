@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_labwork_2/pages/home/home_view.dart';
+import 'package:flutter_labwork_2/pages/home/view/home_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
@@ -14,6 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF191919),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          centerTitle: true,
+          iconTheme: IconThemeData(
+            color: Colors.deepPurple,
+          ),
+        ),
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
         ),
@@ -27,6 +36,11 @@ class MyApp extends StatelessWidget {
           ),
           titleMedium: TextStyle(
             fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.white70,
+          ),
+          titleSmall: TextStyle(
+            fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Colors.white70,
           ),

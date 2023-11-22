@@ -33,16 +33,19 @@ class PassiveFourthSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setBalanceAtBeginning,
+              initialValue: provider.balance.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setBalanceAtEnd,
+              initialValue: provider.balance.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
         ),
+        const Divider(height: 0),
       ],
     );
   }

@@ -61,6 +61,11 @@ class HeaderView extends ConsumerWidget {
                               .read(companyStateNotifierProvider.notifier)
                               .setYearsOfExistance(int.tryParse(value) ?? 0),
                           hintText: 'Років',
+                          initialValue: ref
+                              .watch(companyStateNotifierProvider)
+                              .details
+                              .yearsOfExistance
+                              .toString(),
                         ),
                       ),
                     ],
@@ -80,6 +85,11 @@ class HeaderView extends ConsumerWidget {
                               .read(companyStateNotifierProvider.notifier)
                               .setGradationOfProfitLossAnalysis,
                           hintText: '(0; 5]',
+                          initialValue: ref
+                              .watch(companyStateNotifierProvider)
+                              .details
+                              .gradationOfProfitLossAnalysis
+                              .toString(),
                         ),
                       ),
                     ],
@@ -100,6 +110,11 @@ class HeaderView extends ConsumerWidget {
                               .setLargestAmountOfCredit(
                                 double.tryParse(value) ?? 0.0,
                               ),
+                          initialValue: ref
+                              .watch(companyStateNotifierProvider)
+                              .details
+                              .largestAmountOfCredit
+                              .toString(),
                         ),
                       ),
                     ],
@@ -120,6 +135,11 @@ class HeaderView extends ConsumerWidget {
                               .setAmountOfRequiredCredit(
                                 double.tryParse(value) ?? 0.0,
                               ),
+                          initialValue: ref
+                              .watch(companyStateNotifierProvider)
+                              .details
+                              .amountOfRequiredCredit
+                              .toString(),
                         ),
                       ),
                     ],
@@ -135,11 +155,17 @@ class HeaderView extends ConsumerWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
                         child: TextInput(
-                            onChanged: (value) => ref
-                                .read(companyStateNotifierProvider.notifier)
-                                .setNumberOfOwnMoneyInvested(
-                                  double.tryParse(value) ?? 0.0,
-                                )),
+                          onChanged: (value) => ref
+                              .read(companyStateNotifierProvider.notifier)
+                              .setNumberOfOwnMoneyInvested(
+                                double.tryParse(value) ?? 0.0,
+                              ),
+                          initialValue: ref
+                              .watch(companyStateNotifierProvider)
+                              .details
+                              .numberOfOwnMoneyInvested
+                              .toString(),
+                        ),
                       ),
                     ],
                   ),
@@ -159,6 +185,13 @@ class HeaderView extends ConsumerWidget {
                               .setValueOfLiquidProperty(
                                 double.tryParse(value) ?? 0.0,
                               ),
+                          initialValue: ref
+                              .watch(
+                                companyStateNotifierProvider,
+                              )
+                              .details
+                              .valueOfLiquidProperty
+                              .toString(),
                         ),
                       ),
                     ],
@@ -206,6 +239,7 @@ class HeaderView extends ConsumerWidget {
                     onChanged:
                         ref.read(companyStateNotifierProvider.notifier).setName,
                     hintText: 'Pepega Inc.',
+                    initialValue: ref.watch(companyStateNotifierProvider).name,
                   ),
                 ),
               ],
@@ -225,6 +259,9 @@ class HeaderView extends ConsumerWidget {
                         .read(companyStateNotifierProvider.notifier)
                         .setRegisterInCountry,
                     hintText: '**** ****',
+                    initialValue: ref
+                        .watch(companyStateNotifierProvider)
+                        .registerInCountry,
                   ),
                 ),
               ],
@@ -244,6 +281,8 @@ class HeaderView extends ConsumerWidget {
                         .read(companyStateNotifierProvider.notifier)
                         .setAddress,
                     hintText: 'вул. Святого Пепеги, 1',
+                    initialValue:
+                        ref.watch(companyStateNotifierProvider).address,
                   ),
                 ),
               ],

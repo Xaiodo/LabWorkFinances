@@ -4,6 +4,7 @@ class TextInput extends StatelessWidget {
   const TextInput({
     required this.onChanged,
     this.hintText = 'Грн.',
+    this.initialValue,
     this.labelText,
     this.icon,
     super.key,
@@ -13,6 +14,7 @@ class TextInput extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final Widget? icon;
+  final String? initialValue;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -20,7 +22,8 @@ class TextInput extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: Colors.white10.withOpacity(0.02),
         ),
-        child: TextField(
+        child: TextFormField(
+          initialValue: initialValue,
           onChanged: onChanged,
           decoration: InputDecoration(
             hintText: hintText,
@@ -39,7 +42,6 @@ class TextInput extends StatelessWidget {
             height: 1.5,
           ),
           style: Theme.of(context).textTheme.bodyMedium,
-          expands: false,
           keyboardType: TextInputType.multiline,
           maxLines: null,
         ),

@@ -9,10 +9,8 @@ class CompanyStateNotifier extends StateNotifier<Company> {
     required this.reportProvider,
   }) : super(Company.initial());
 
-  Company get getCurrentCompany => state;
-
   void addReport() {
-    final report = reportProvider.getreport();
+    final report = reportProvider.getReport();
     state = state.copyWith(reports: [
       ...state.reports,
       report,

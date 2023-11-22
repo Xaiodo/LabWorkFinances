@@ -3,21 +3,21 @@ import 'package:flutter_labwork_2/models/passive/passive_second_section.dart';
 import 'package:flutter_labwork_2/models/passive/passive_third_section.dart';
 import 'package:flutter_labwork_2/models/passive/passive_fourth_section.dart';
 
-class Passive {
+class PassiveSection {
   final PassiveFirstSection firstSection;
   final PassiveSecondSection secondSection;
   final PassiveThirdSection thirdSection;
   final PassiveFourthSection fourthSection;
 
-  Passive({
+  PassiveSection({
     required this.firstSection,
     required this.secondSection,
     required this.thirdSection,
     required this.fourthSection,
   });
 
-  factory Passive.initial() {
-    return Passive(
+  factory PassiveSection.initial() {
+    return PassiveSection(
       firstSection: PassiveFirstSection.initial(),
       secondSection: PassiveSecondSection.initial(),
       thirdSection: PassiveThirdSection.initial(),
@@ -25,13 +25,13 @@ class Passive {
     );
   }
 
-  Passive copyWith({
+  PassiveSection copyWith({
     PassiveFirstSection? firstSection,
     PassiveSecondSection? secondSection,
     PassiveThirdSection? thirdSection,
     PassiveFourthSection? fourthSection,
   }) {
-    return Passive(
+    return PassiveSection(
       firstSection: firstSection ?? this.firstSection,
       secondSection: secondSection ?? this.secondSection,
       thirdSection: thirdSection ?? this.thirdSection,
@@ -39,8 +39,8 @@ class Passive {
     );
   }
 
-  factory Passive.fromJson(Map<String, dynamic> json) {
-    return Passive(
+  factory PassiveSection.fromJson(Map<String, dynamic> json) {
+    return PassiveSection(
       firstSection: PassiveFirstSection.fromJson(json['firstSection']),
       secondSection: PassiveSecondSection.fromJson(json['secondSection']),
       thirdSection: PassiveThirdSection.fromJson(json['thirdSection']),

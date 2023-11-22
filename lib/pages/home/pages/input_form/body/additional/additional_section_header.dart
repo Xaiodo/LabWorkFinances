@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
 
-class PassiveHeader extends StatelessWidget {
-  const PassiveHeader({super.key});
+class AdditionalSectionHeader extends StatelessWidget {
+  const AdditionalSectionHeader({super.key});
 
   @override
   Widget build(BuildContext context) => const Column(
@@ -10,7 +10,7 @@ class PassiveHeader extends StatelessWidget {
           Divider(height: 0),
           BodyRow(
             Text(
-              'Пасив',
+              'Додаткова інформація',
             ),
             Text(
               'Код рядка',
@@ -20,6 +20,24 @@ class PassiveHeader extends StatelessWidget {
             ),
             Text(
               'На кінець звітного періоду',
+            ),
+            flex1: 2,
+          ),
+          Divider(
+            height: 0,
+          ),
+          BodyRow(
+            Text(
+              '1',
+            ),
+            Text(
+              '2',
+            ),
+            Text(
+              '3',
+            ),
+            Text(
+              '4',
             ),
             flex1: 2,
           ),

@@ -220,8 +220,6 @@ class ActiveSecondSectionNotifier extends StateNotifier<ActiveSecondSection> {
           priceAtEnd: double.tryParse(value) ?? 0,
         ),
       );
-
-  ActiveSecondSection getActiveSecondSection() => state;
 }
 
 final activeSecondSectionProvider =

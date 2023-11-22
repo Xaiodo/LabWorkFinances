@@ -315,10 +315,6 @@ class ActiveFirstSectionNotifier extends StateNotifier<ActiveFirstSection> {
       ),
     );
   }
-
-  ActiveFirstSection getActiveFirstSection() {
-    return state;
-  }
 }
 
 final activeFirstSectionProvider =

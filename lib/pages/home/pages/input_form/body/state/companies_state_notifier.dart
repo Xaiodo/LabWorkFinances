@@ -9,11 +9,12 @@ class CompaniesStateNotifier extends StateNotifier<List<Company>> {
   CompaniesStateNotifier({
     required this.companyProvider,
     required this.companiesService,
-  }) : super([]);
+  }) : super([]) {
+    companiesService.getCompanies().then((value) => state = value);
+  }
 
   void addCompany() {
-    final company = companyProvider.getCurrentCompany;
-    print(company);
+    final company = companyProvider.state;
     state = [...state, company];
     companyProvider.reset();
     companiesService.saveCompanies(state);
@@ -23,7 +24,7 @@ class CompaniesStateNotifier extends StateNotifier<List<Company>> {
 final companiesProvider =
     StateNotifierProvider<CompaniesStateNotifier, List<Company>>(
   (ref) => CompaniesStateNotifier(
-    companyProvider: ref.read(companyStateNotifierProvider.notifier),
+    companyProvider: ref.watch(companyStateNotifierProvider.notifier),
     companiesService: ref.read(companiesServiceProvider),
   ),
 );

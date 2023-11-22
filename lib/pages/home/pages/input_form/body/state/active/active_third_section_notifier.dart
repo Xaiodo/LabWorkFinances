@@ -28,8 +28,6 @@ class ActiveThirdSectionNotfier extends StateNotifier<ActiveThirdSection> {
       ),
     );
   }
-
-  ActiveThirdSection getActiveThirdSection() => state;
 }
 
 final activeThirdSectionProvider =

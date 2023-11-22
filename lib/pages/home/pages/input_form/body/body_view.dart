@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_first_section_widget.dart';
-import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_header.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_section_header.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_second_section_widget.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/active/active_third_section_widget.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/additional/additional_section.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/additional/additional_section_header.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_first_section_widget.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_fourth_section_widget.dart';
-import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_header.dart';
+import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_section_header.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_second_section_widget.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/passive/passive_third_section_widget.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/companies_state_notifier.dart';
@@ -78,7 +80,7 @@ class BodyView extends ConsumerWidget {
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                ActiveHeader(),
+                ActiveSectionHeader(),
                 ActiveFirstSectionWidget(),
                 ActiveSecondSectionWidget(),
                 ActiveThirdSectionWidget(),
@@ -96,11 +98,27 @@ class BodyView extends ConsumerWidget {
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                PassiveHeader(),
+                PassiveSectionHeader(),
                 PassiveFirstSectionWidget(),
                 PassiveSecondSectionWidget(),
                 PassiveThirdSectionWidget(),
                 PassiveFourthSectionWidget(),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 60,
+            child: Divider(
+              color: Theme.of(context).primaryColor.withOpacity(0.4),
+              thickness: 2,
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              children: [
+                AdditionalSectionHeader(),
+                AdditionalSectionWidget(),
               ],
             ),
           ),
@@ -113,7 +131,10 @@ class BodyView extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
-                  onPressed: ref.read(companiesProvider.notifier).addCompany,
+                  onPressed: () {
+                    ref.read(companiesProvider.notifier).addCompany();
+                    Navigator.pop(context);
+                  },
                   child: const Text('Зберегти інформацію компанії'),
                 ),
                 ElevatedButton(

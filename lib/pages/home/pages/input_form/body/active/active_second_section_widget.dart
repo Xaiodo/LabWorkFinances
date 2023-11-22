@@ -31,12 +31,14 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setStocksAtBeginning,
+              initialValue: provider.stocks.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setStocksAtEnd,
+              initialValue: provider.stocks.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -49,12 +51,16 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCurrentBiologicalAssetsAtBeginning,
+              initialValue:
+                  provider.currentBiologicalAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCurrentBiologicalAssetsAtEnd,
+              initialValue:
+                  provider.currentBiologicalAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -67,12 +73,15 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setAccountsReceivableAtBeginning,
+              initialValue:
+                  provider.accountsReceivable.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setAccountsReceivableAtEnd,
+              initialValue: provider.accountsReceivable.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -86,12 +95,18 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setAccountsReceivableOnSssuedAdvancesAtBeginning,
+              initialValue: provider
+                  .accountsReceivableOnSssuedAdvances.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setAccountsReceivableOnSssuedAdvancesAtEnd,
+              initialValue: provider
+                  .accountsReceivableOnSssuedAdvances.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -104,12 +119,17 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setAccountsReceivableWithBudgetAtBeginning,
+              initialValue: provider
+                  .accountsReceivableWithBudget.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setAccountsReceivableWithBudgetAtEnd,
+              initialValue:
+                  provider.accountsReceivableWithBudget.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -123,12 +143,18 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             child: TextInput(
               onChanged:
                   notifier.setAccountsReceivableIncludingIncomeTaxAtBeginning,
+              initialValue: provider
+                  .accountsReceivableIncludingIncomeTax.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setAccountsReceivableIncludingIncomeTaxAtEnd,
+              initialValue: provider
+                  .accountsReceivableIncludingIncomeTax.priceAtEnd
+                  .toString(),
             ),
           ),
           flex1: 2,
@@ -143,12 +169,16 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherAccountsReceivableAtBeginning,
+              initialValue:
+                  provider.otherAccountsReceivable.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherAccountsReceivableAtEnd,
+              initialValue:
+                  provider.otherAccountsReceivable.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -163,12 +193,17 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCurrentFinancialInvestmentsAtBeginning,
+              initialValue: provider
+                  .currentFinancialInvestments.priceAtBeginning
+                  .toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCurrentFinancialInvestmentsAtEnd,
+              initialValue:
+                  provider.currentFinancialInvestments.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -183,12 +218,14 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCashAtBeginning,
+              initialValue: provider.cash.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setCashAtEnd,
+              initialValue: provider.cash.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -203,12 +240,16 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setExpensesFuturePeriodsAtBeginning,
+              initialValue:
+                  provider.expensesFuturePeriods.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setExpensesFuturePeriodsAtEnd,
+              initialValue:
+                  provider.expensesFuturePeriods.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -223,12 +264,15 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherCurrentAssetsAtBeginning,
+              initialValue:
+                  provider.otherCurrentAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setOtherCurrentAssetsAtEnd,
+              initialValue: provider.otherCurrentAssets.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,
@@ -243,12 +287,14 @@ class ActiveSecondSectionWidget extends ConsumerWidget {
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setTotalAtBeginning,
+              initialValue: provider.total.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
             child: TextInput(
               onChanged: notifier.setTotalAtEnd,
+              initialValue: provider.total.priceAtEnd.toString(),
             ),
           ),
           flex1: 2,

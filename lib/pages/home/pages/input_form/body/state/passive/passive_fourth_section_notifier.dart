@@ -13,6 +13,8 @@ class PassiveFourthSectionNotifier extends StateNotifier<PassiveFourthSection> {
           ),
         );
 
+  void reset() => state = PassiveFourthSection.initial();
+
   void setBalanceAtBeginning(String value) => state = state.copyWith(
         balance: state.balance.copyWith(
           priceAtBeginning: double.tryParse(value) ?? 0,
