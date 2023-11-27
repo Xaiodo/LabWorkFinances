@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/company/company_state_notifier.dart';
-import 'package:flutter_labwork_2/widgets/text_input.dart';
+import 'package:flutter_labwork_2/widgets/input_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HeaderView extends ConsumerWidget {
@@ -56,7 +56,7 @@ class HeaderView extends ConsumerWidget {
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
-                        child: TextInput(
+                        child: InputText(
                           onChanged: (value) => ref
                               .read(companyStateNotifierProvider.notifier)
                               .setYearsOfExistance(int.tryParse(value) ?? 0),
@@ -80,7 +80,7 @@ class HeaderView extends ConsumerWidget {
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
-                        child: TextInput(
+                        child: InputText(
                           onChanged: ref
                               .read(companyStateNotifierProvider.notifier)
                               .setGradationOfProfitLossAnalysis,
@@ -104,7 +104,7 @@ class HeaderView extends ConsumerWidget {
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
-                        child: TextInput(
+                        child: InputText(
                           onChanged: (value) => ref
                               .read(companyStateNotifierProvider.notifier)
                               .setLargestAmountOfCredit(
@@ -129,7 +129,7 @@ class HeaderView extends ConsumerWidget {
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
-                        child: TextInput(
+                        child: InputText(
                           onChanged: (value) => ref
                               .read(companyStateNotifierProvider.notifier)
                               .setAmountOfRequiredCredit(
@@ -154,7 +154,7 @@ class HeaderView extends ConsumerWidget {
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
-                        child: TextInput(
+                        child: InputText(
                           onChanged: (value) => ref
                               .read(companyStateNotifierProvider.notifier)
                               .setNumberOfOwnMoneyInvested(
@@ -179,7 +179,7 @@ class HeaderView extends ConsumerWidget {
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.1,
-                        child: TextInput(
+                        child: InputText(
                           onChanged: (value) => ref
                               .read(companyStateNotifierProvider.notifier)
                               .setValueOfLiquidProperty(
@@ -235,7 +235,7 @@ class HeaderView extends ConsumerWidget {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.13,
-                  child: TextInput(
+                  child: InputText(
                     onChanged:
                         ref.read(companyStateNotifierProvider.notifier).setName,
                     hintText: 'Pepega Inc.',
@@ -254,7 +254,7 @@ class HeaderView extends ConsumerWidget {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.13,
-                  child: TextInput(
+                  child: InputText(
                     onChanged: ref
                         .read(companyStateNotifierProvider.notifier)
                         .setRegisterInCountry,
@@ -276,7 +276,7 @@ class HeaderView extends ConsumerWidget {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.13,
-                  child: TextInput(
+                  child: InputText(
                     onChanged: ref
                         .read(companyStateNotifierProvider.notifier)
                         .setAddress,

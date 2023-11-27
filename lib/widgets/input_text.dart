@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TextInput extends StatelessWidget {
-  const TextInput({
+class InputText extends StatelessWidget {
+  const InputText({
     required this.onChanged,
     this.hintText = 'Грн.',
     this.initialValue,
     this.labelText,
     this.icon,
+    this.cursorColor = Colors.deepPurple,
     super.key,
   });
 
@@ -15,6 +16,7 @@ class TextInput extends StatelessWidget {
   final String? labelText;
   final Widget? icon;
   final String? initialValue;
+  final Color? cursorColor;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -41,6 +43,7 @@ class TextInput extends StatelessWidget {
             fontSize: 14,
             height: 1.5,
           ),
+          cursorColor: cursorColor,
           style: Theme.of(context).textTheme.bodyMedium,
           keyboardType: TextInputType.multiline,
           maxLines: null,

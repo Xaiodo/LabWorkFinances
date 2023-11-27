@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_second_section_notifier.dart';
-import 'package:flutter_labwork_2/widgets/text_input.dart';
+import 'package:flutter_labwork_2/widgets/input_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PassiveSecondSectionWidget extends ConsumerWidget {
@@ -29,7 +29,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           Text(provider.deferredTaxLiabilities.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setDeferredTaxLiabilitiesAtBeginning,
               initialValue:
                   provider.deferredTaxLiabilities.priceAtBeginning.toString(),
@@ -37,7 +37,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setDeferredTaxLiabilitiesAtEnd,
               initialValue:
                   provider.deferredTaxLiabilities.priceAtEnd.toString(),
@@ -51,7 +51,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           Text(provider.longTermBankLoans.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongTermBankLoansAtBeginning,
               initialValue:
                   provider.longTermBankLoans.priceAtBeginning.toString(),
@@ -59,7 +59,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongTermBankLoansAtEnd,
               initialValue: provider.longTermBankLoans.priceAtEnd.toString(),
             ),
@@ -72,7 +72,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           Text(provider.otherLongTermLiabilities.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherLongTermLiabilitiesAtBeginning,
               initialValue:
                   provider.otherLongTermLiabilities.priceAtBeginning.toString(),
@@ -80,7 +80,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherLongTermLiabilitiesAtEnd,
               initialValue:
                   provider.otherLongTermLiabilities.priceAtEnd.toString(),
@@ -94,7 +94,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           Text(provider.longTermProvisions.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongTermProvisionsAtBeginning,
               initialValue:
                   provider.longTermProvisions.priceAtBeginning.toString(),
@@ -102,7 +102,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongTermProvisionsAtEnd,
               initialValue: provider.longTermProvisions.priceAtEnd.toString(),
             ),
@@ -115,7 +115,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           Text(provider.targetedFunding.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTargetedFundingAtBeginning,
               initialValue:
                   provider.targetedFunding.priceAtBeginning.toString(),
@@ -123,7 +123,7 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTargetedFundingAtEnd,
               initialValue: provider.targetedFunding.priceAtEnd.toString(),
             ),
@@ -136,14 +136,14 @@ class PassiveSecondSectionWidget extends ConsumerWidget {
           Text(provider.total.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTotalAtBeginning,
               initialValue: provider.total.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTotalAtEnd,
               initialValue: provider.total.priceAtEnd.toString(),
             ),

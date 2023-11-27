@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_third_section_notifier.dart';
-import 'package:flutter_labwork_2/widgets/text_input.dart';
+import 'package:flutter_labwork_2/widgets/input_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ActiveThirdSectionWidget extends ConsumerWidget {
@@ -29,14 +29,14 @@ class ActiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.balance.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setBalanceAtBeginning,
               initialValue: provider.balance.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setBalanceAtEnd,
               initialValue: provider.balance.priceAtEnd.toString(),
             ),

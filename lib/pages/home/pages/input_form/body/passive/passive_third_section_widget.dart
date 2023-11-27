@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/passive/passive_third_section_notifier.dart';
-import 'package:flutter_labwork_2/widgets/text_input.dart';
+import 'package:flutter_labwork_2/widgets/input_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PassiveThirdSectionWidget extends ConsumerWidget {
@@ -29,7 +29,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.shortTermBankLoans.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setShortTermBankLoansAtBeginning,
               initialValue:
                   provider.shortTermBankLoans.priceAtBeginning.toString(),
@@ -37,7 +37,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setShortTermBankLoansAtEnd,
               initialValue: provider.shortTermBankLoans.priceAtEnd.toString(),
             ),
@@ -50,7 +50,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentAccountsPayableForLongTermLiabilities.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForLongTermLiabilitiesAtBeginning,
               initialValue: provider
@@ -60,7 +60,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setCurrentAccountsPayableForLongTermLiabilitiesAtEnd,
               initialValue: provider
@@ -76,7 +76,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentAccountsPayableForGoodsServices.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setCurrentAccountsPayableForGoodsServicesAtBeginning,
               initialValue: provider
@@ -86,7 +86,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setCurrentAccountsPayableForGoodsServicesAtEnd,
               initialValue: provider
@@ -102,7 +102,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentAccountsPayableForBudgetarySettlements.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForBudgetarySettlementsAtBeginning,
               initialValue: provider
@@ -113,7 +113,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForBudgetarySettlementsAtEnd,
               initialValue: provider
@@ -129,7 +129,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentAccountsPayableIncludingIncomeTax.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtBeginning,
               initialValue: provider
@@ -140,7 +140,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtEnd,
               initialValue: provider
@@ -156,7 +156,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentAccountsPayableForInsuranceSettlements.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtBeginning,
               initialValue: provider
@@ -167,7 +167,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setCurrentAccountsPayableForInsuranceSettlementsAtEnd,
               initialValue: provider
@@ -183,7 +183,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentAccountsPayableForLaborPayments.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setCurrentAccountsPayableForLaborPaymentsAtBeginning,
               initialValue: provider
@@ -193,7 +193,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setCurrentAccountsPayableForLaborPaymentsAtEnd,
               initialValue: provider
@@ -209,7 +209,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.currentProvisions.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setCurrentProvisionsAtBeginning,
               initialValue:
                   provider.currentProvisions.priceAtBeginning.toString(),
@@ -217,7 +217,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setCurrentProvisionsAtEnd,
               initialValue: provider.currentProvisions.priceAtEnd.toString(),
             ),
@@ -230,7 +230,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.futurePeriodRevenues.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setFuturePeriodRevenuesAtBeginning,
               initialValue:
                   provider.futurePeriodRevenues.priceAtBeginning.toString(),
@@ -238,7 +238,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setFuturePeriodRevenuesAtEnd,
               initialValue: provider.futurePeriodRevenues.priceAtEnd.toString(),
             ),
@@ -251,7 +251,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.otherCurrentLiabilities.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherCurrentLiabilitiesAtBeginning,
               initialValue:
                   provider.otherCurrentLiabilities.priceAtBeginning.toString(),
@@ -259,7 +259,7 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherCurrentLiabilitiesAtEnd,
               initialValue:
                   provider.otherCurrentLiabilities.priceAtEnd.toString(),
@@ -273,14 +273,14 @@ class PassiveThirdSectionWidget extends ConsumerWidget {
           Text(provider.total.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTotalAtBeginning,
               initialValue: provider.total.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTotalAtEnd,
               initialValue: provider.total.priceAtEnd.toString(),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/active/active_first_section_notifier.dart';
-import 'package:flutter_labwork_2/widgets/text_input.dart';
+import 'package:flutter_labwork_2/widgets/input_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ActiveFirstSectionWidget extends ConsumerWidget {
@@ -28,7 +28,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.intangibleAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setIntangibleAssetsPriceAtBeginning,
               initialValue:
                   provider.intangibleAssets.priceAtBeginning.toString(),
@@ -36,7 +36,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setIntangibleAssetsPriceAtEnd,
               initialValue: provider.intangibleAssets.priceAtEnd.toString(),
             ),
@@ -49,7 +49,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.initualValueOfIntangibleAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setnitualValueOfIntangibleAssetsAtBeginning,
               initialValue: provider
                   .initualValueOfIntangibleAssets.priceAtBeginning
@@ -58,7 +58,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setnitualValueOfIntangibleAssetsAtEnd,
               initialValue:
                   provider.initualValueOfIntangibleAssets.priceAtEnd.toString(),
@@ -72,7 +72,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.accumulatedAmortizationOfIntangibleAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier
                   .setAccumulatedAmortizationOfIntangibleAssetsAtBeginning,
               initialValue: provider
@@ -82,7 +82,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setAccumulatedAmortizationOfIntangibleAssetsAtEnd,
               initialValue: provider
@@ -98,7 +98,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.unfinishedCapitalInvestments.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setUnfinishedCapitalInvestmentsAtBeginning,
               initialValue: provider
                   .unfinishedCapitalInvestments.priceAtBeginning
@@ -107,7 +107,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setUnfinishedCapitalInvestmentsAtEnd,
               initialValue:
                   provider.unfinishedCapitalInvestments.priceAtEnd.toString(),
@@ -121,14 +121,14 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.mainAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setMainAssetsAtBeginning,
               initialValue: provider.mainAssets.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setMainAssetsAtEnd,
               initialValue: provider.mainAssets.priceAtEnd.toString(),
             ),
@@ -141,7 +141,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.initialValueOfMainAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setInitialValueOfMainAssetsAtBeginning,
               initialValue:
                   provider.initialValueOfMainAssets.priceAtBeginning.toString(),
@@ -149,7 +149,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setInitialValueOfMainAssetsAtEnd,
               initialValue:
                   provider.initialValueOfMainAssets.priceAtEnd.toString(),
@@ -163,7 +163,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.wearAndTearOfMainAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setWearAndTearOfMainAssetsAtBeginning,
               initialValue:
                   provider.wearAndTearOfMainAssets.priceAtBeginning.toString(),
@@ -171,7 +171,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setWearAndTearOfMainAssetsAtEnd,
               initialValue:
                   provider.wearAndTearOfMainAssets.priceAtEnd.toString(),
@@ -185,7 +185,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.investmentProperty.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setInvestmentPropertyAtBeginning,
               initialValue:
                   provider.investmentProperty.priceAtBeginning.toString(),
@@ -193,7 +193,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setInvestmentPropertyAtEnd,
               initialValue: provider.investmentProperty.priceAtEnd.toString(),
             ),
@@ -206,7 +206,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.longtermBiologicalAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongtermBiologicalAssetsAtBeginning,
               initialValue:
                   provider.longtermBiologicalAssets.priceAtBeginning.toString(),
@@ -214,7 +214,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongtermBiologicalAssetsAtEnd,
               initialValue:
                   provider.longtermBiologicalAssets.priceAtEnd.toString(),
@@ -228,7 +228,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.byMethodOfParticipation.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setByMethodOfParticipationAtBeginning,
               initialValue:
                   provider.byMethodOfParticipation.priceAtBeginning.toString(),
@@ -236,7 +236,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setByMethodOfParticipationAtEnd,
               initialValue:
                   provider.byMethodOfParticipation.priceAtEnd.toString(),
@@ -250,7 +250,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.otherFinancialInvestmentsOfLongTerm.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setOtherFinancialInvestmentsOfLongTermAtBeginning,
               initialValue: provider
@@ -260,7 +260,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherFinancialInvestmentsOfLongTermAtEnd,
               initialValue: provider
                   .otherFinancialInvestmentsOfLongTerm.priceAtEnd
@@ -275,7 +275,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.longtermReceivables.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongtermReceivablesAtBeginning,
               initialValue:
                   provider.longtermReceivables.priceAtBeginning.toString(),
@@ -283,7 +283,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLongtermReceivablesAtEnd,
               initialValue: provider.longtermReceivables.priceAtEnd.toString(),
             ),
@@ -296,7 +296,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.deferredTaxAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setDeferredTaxAssetsAtBeginning,
               initialValue:
                   provider.deferredTaxAssets.priceAtBeginning.toString(),
@@ -304,7 +304,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setDeferredTaxAssetsAtEnd,
               initialValue: provider.deferredTaxAssets.priceAtEnd.toString(),
             ),
@@ -317,7 +317,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.otherNonCurrentAssets.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherNonCurrentAssetsAtBeginning,
               initialValue:
                   provider.otherNonCurrentAssets.priceAtBeginning.toString(),
@@ -325,7 +325,7 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherNonCurrentAssetsAtEnd,
               initialValue:
                   provider.otherNonCurrentAssets.priceAtEnd.toString(),
@@ -341,14 +341,14 @@ class ActiveFirstSectionWidget extends ConsumerWidget {
           Text(provider.total.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTotalAtBeginning,
               initialValue: provider.total.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setTotalAtEnd,
               initialValue: provider.total.priceAtEnd.toString(),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/state/additional/additional_section_notifier.dart';
 import 'package:flutter_labwork_2/pages/home/pages/input_form/body/widgets/body_row.dart';
-import 'package:flutter_labwork_2/widgets/text_input.dart';
+import 'package:flutter_labwork_2/widgets/input_text.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AdditionalSectionWidget extends ConsumerWidget {
@@ -28,14 +28,14 @@ class AdditionalSectionWidget extends ConsumerWidget {
           Text(provider.netIncome.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setNetIncomePriceAtBeginning,
               initialValue: provider.netIncome.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setNetIncomePriceAtEnd,
               initialValue: provider.netIncome.priceAtEnd.toString(),
             ),
@@ -48,14 +48,14 @@ class AdditionalSectionWidget extends ConsumerWidget {
           Text(provider.materialCosts.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setMaterialCostsPriceAtBeginning,
               initialValue: provider.materialCosts.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setMaterialCostsPriceAtEnd,
               initialValue: provider.materialCosts.priceAtEnd.toString(),
             ),
@@ -68,14 +68,14 @@ class AdditionalSectionWidget extends ConsumerWidget {
           Text(provider.laborCosts.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLaborCostsPriceAtBeginning,
               initialValue: provider.laborCosts.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setLaborCostsPriceAtEnd,
               initialValue: provider.laborCosts.priceAtEnd.toString(),
             ),
@@ -88,7 +88,7 @@ class AdditionalSectionWidget extends ConsumerWidget {
           Text(provider.socialSecurityContributions.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged:
                   notifier.setSocialSecurityContributionsPriceAtBeginning,
               initialValue: provider
@@ -98,7 +98,7 @@ class AdditionalSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setSocialSecurityContributionsPriceAtEnd,
               initialValue:
                   provider.socialSecurityContributions.priceAtEnd.toString(),
@@ -112,14 +112,14 @@ class AdditionalSectionWidget extends ConsumerWidget {
           Text(provider.depreciation.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setDepreciationPriceAtBeginning,
               initialValue: provider.depreciation.priceAtBeginning.toString(),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setDepreciationPriceAtEnd,
               initialValue: provider.depreciation.priceAtEnd.toString(),
             ),
@@ -132,7 +132,7 @@ class AdditionalSectionWidget extends ConsumerWidget {
           Text(provider.otherOperatingExpenses.code),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherOperatingExpensesPriceAtBeginning,
               initialValue:
                   provider.otherOperatingExpenses.priceAtBeginning.toString(),
@@ -140,7 +140,7 @@ class AdditionalSectionWidget extends ConsumerWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8),
-            child: TextInput(
+            child: InputText(
               onChanged: notifier.setOtherOperatingExpensesPriceAtEnd,
               initialValue:
                   provider.otherOperatingExpenses.priceAtEnd.toString(),
